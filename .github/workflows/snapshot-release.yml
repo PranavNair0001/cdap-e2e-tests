@@ -21,7 +21,7 @@ on:
 jobs:
 
   release-job:
-    runs-on: cdapio-hub-k8-runner
+    runs-on: ubuntu-latest
 
     steps:
 

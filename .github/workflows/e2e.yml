@@ -29,7 +29,7 @@ on:
 
 jobs:
   build:
-    runs-on: k8s-runner-e2e
+    runs-on: ubuntu-latest
     steps:
     # Pinned 1.0.0 version
     - uses: actions/checkout@v2.3.4
