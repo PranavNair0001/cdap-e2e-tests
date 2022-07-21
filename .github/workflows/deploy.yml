@@ -22,6 +22,15 @@ on:
 
 jobs:
 
+  commit-status:
+    if: ${{ github.event.workflow_run.conclusion != 'skipped' }}
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: haya14busa/action-workflow_run-status@967ed83efa565c257675ed70cfe5231f062ddd94
+
+
   run-e2e:
     if: ${{ github.event.workflow_run.conclusion != 'skipped' }}
     uses: ./.github/workflows/e2e.yml
